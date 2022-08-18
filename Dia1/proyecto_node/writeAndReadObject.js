@@ -8,4 +8,4 @@ function writeAndReadObject(fichero, cliente, callback) {
   });
 }
 
-module.exports.writeAndReadObject = writeAndReadObject;
+module.exports = {writeAndReadObject};

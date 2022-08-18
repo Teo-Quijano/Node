@@ -1,0 +1,54 @@
+
+.imagen-principal {
+    height: 100vh;
+    width: 98.5vw;
+    opacity: 0.8;
+    object-fit: cover;
+    position: absolute;
+    z-index: -2
+}
+
+.escoge {
+
+    margin-left: 1.5rem;
+}
+.batalla {
+position: absolute;
+    color: rgb(232, 232, 232);
+    margin-left: 26rem;
+    margin-top: 2rem;
+
+}
+
+.pokemon1 {
+
+    position: absolute;
+    margin-left: 10rem;
+    margin-top: 0rem;
+}
+
+.pokemon2 {
+
+    position: relative;
+    margin-left: 50rem;
+    margin-top: -2rem;
+}
+.versus {
+
+    position: absolute;
+    color: rgba(226, 18, 18, 0.879);
+    font-size:xx-large;
+    font-weight: 700;
+    margin-left: 38rem;
+    margin-top: 10rem;
+}
+.label {
+    margin-left: 1rem;
+    text-decoration-color: white;
+    font-size: larger;
+}
+
+.card {
+
+    align-items: center;
+}

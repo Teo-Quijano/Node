@@ -23,4 +23,4 @@ function readConsole(callback) {
   });
 }
 
-module.exports.readConsole = readConsole;
+module.exports = {readConsole};
