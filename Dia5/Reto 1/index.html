@@ -16,28 +16,28 @@
 
 <body>
     <main>
-        <section class="cuerpo_principal">
-            <section class="principal1">
+        <section class="main">
+            <section class="principal">
 
-                <section class="derecha1">
+                <section class="aside">
                     <h2 class="titulo">ELENCO PELICULA HEAT</h2>
                     <h2 class="titulo">Rellena los datos del Formulario</h2>
                     <div class="formulario">
                         <input type="text" class="form-control" id="name" placeholder="Nombre">
                         <input type="text" class="form-control" id="age" placeholder="Edad">
+                        <input type="text" class="form-control" id="nationality" placeholder="Nacionalidad">
+                        <input type="text" class="form-control" id="genre" placeholder="Genero">
                         <input type="text" class="form-control" id="weight" placeholder="Peso">
                         <input type="text" class="form-control" id="height" placeholder="Altura">
                         <input type="text" class="form-control" id="hairColor" placeholder="Color de pelo">
                         <input type="text" class="form-control" id="eyeColor" placeholder="Color de ojos">
-                        <input type="text" class="form-control" id="nationality" placeholder="Nacionalidad">
-                        <input type="text" class="form-control" id="genre" placeholder="Genero">
                     </div>
                 </section>
 
             </section>
 
 
-            <section class="principal2">
+            <section class="menu">
                 <div class="botones">
                     <button type="reset" class="btn btn-success" onclick="getCast()">
                         MOSTRAR
@@ -45,7 +45,7 @@
                     <button type="button" class="btn btn-primary" onclick="postActores()">
                         CREAR
                     </button>
-                    <button type="button" class="btn btn-warning" onclick="putActores()">
+                    <button type="button" class="btn btn-danger" onclick="putActores()">
                         ACTUALIZAR
                     </button>
                     <button type="button" class="btn btn-danger" onclick="deleteActores()">
@@ -55,13 +55,15 @@
             </section>
 
 
-            <section class="principal3" id="final"></section>
+            <section class="toast" id="final"></section>
 
-            <div id = "toast" class="toast position-fixed top-0 end-0 p-3 align-items-center text-white border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div id="toast" class="toast position-fixed top-0 end-0 p-3 align-items-center text-white border-0"
+                role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="d-flex">
-                <div id ="toastText" class="toast-body">
-                </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                    <div id="toastText" class="toast-body">
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
                 </div>
             </div>
 
