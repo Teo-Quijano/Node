@@ -42,43 +42,60 @@ function postActores() {
   }
 }
 
-function getActores() {
-  let url = "http://localhost:3000/";
-  let name = document.getElementById("name").value;
-  let final = document.getElementById("final");
+function getActores()
+{
+    let url = "http://localhost:3000/profesionales";
+    let name = document.getElementById("name")
 
-  if (name != "") {
-    url += `?name="${name}"`;
-  }
-  let param = {
-    headers: { "Content-type": "application/json; charset= UTF-8" },
-    method: "GET",
-  };
-  fetch(url, param)
-    .then(function (data) {
-      return data.json();
+    if (name != ""){
+        url += `?i=${name}`
+    }
+
+    let param = 
+    {
+        headers: {"Content-type": "application/json; charset= UTF-8"},
+        method: "GET"
+    }
+
+    fetch(url, param)
+    .then(function(data)
+    {
+        return data.json()
     })
-    .then(function (result) {
-      //console.log(result);
+    .then(function(result)
+    {      
+        if (!result.error) {
+            
+            
+            let array = result.res
 
-      for (let i = 0; i < result.length; i++) {
-        final.innerHTML += `<p><div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                <div class="card-header"></div>
+            if (name === ""){
+
+            for (let name = 0 ; name < array.length ; name++){
+                
+                final.innerHTML += `<p><div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">TU FAMOSO ES: </div>
                 <div class="card-body">
-                    <h5 class="card-title"><p></p>Datos del Actor:</h5>
-                    <p class="card-text">Nombre: ${result[i].name}</p>
-                    <p class="card-text">Edad: ${result[i].age}</p>
-                    <p class="card-text">Peso: ${result[i].weight}</p>
-                    <p class="card-text">Altura: ${result[i].height}</p>
+                    <h5 class="card-title"><p>${array[0].name}</p></h5>
+                    <p class="card-text">Edad: ${array[0].age} años</p>
+                    <p class="card-text">Genero: ${array[0].genre}</p>
+                    <p class="card-text">Peso: ${array[0].weight} Kg</p>
+                    <p class="card-text">Altura: ${array[0].height} cm</p>
                 </div>
-                </div></p>`;
-      }
+                </div></p>`
+            }
+        }
+    }
+    else {
+        showToast("ERROR: " +  result.message, "bg-danger")
+    }})
+    .catch(function(error)
+    {
+        console.log(error)
     })
-    .catch(function (error) {
-      //console.log(error);
-    });
-  final.innerHTML = "";
+    final.innerHTML = id="mostrar"
 }
+
 
 function putActores() {
   let profesional = new Professional(

@@ -98,14 +98,13 @@ function putActores(request, response) {
   let nationality = request.body.nationality;
   let oscarsNumber = request.body.oscarsNumber;
   let profession = request.body.profession;
-  let id = request.body.id;
 
-  if (id >= reparto.length) {
+  if (name >= reparto.length) {
     respuesta = { error: false, codigo: 200, mensaje: "El dato no existe" };
-  } else if (reparto[id] == null) {
+  } else if (reparto[name] == null) {
     respuesta = { error: false, codigo: 200, mensaje: "El Actor no existe" };
   } else {
-    reparto[id] = new Professional(
+    reparto[name] = new Professional(
       name,
       age,
       genre,
