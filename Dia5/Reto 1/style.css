@@ -1,5 +1,4 @@
-*
-{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -25,7 +24,6 @@ main {
     width: 100%;
 
 }
-
 
 .izquierda1 {
     display: flex;

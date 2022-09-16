@@ -1,4 +1,3 @@
-
 class Professional {
   constructor(name, age, genre, weight, height) {
     this.name = name;
@@ -44,7 +43,7 @@ function postActores() {
 }
 
 function getActores() {
-let url = "http://localhost:3000/";
+  let url = "http://localhost:3000/";
   let name = document.getElementById("name").value;
   let final = document.getElementById("final");
 
@@ -87,7 +86,7 @@ function putActores() {
     document.getElementById("age").value,
     document.getElementById("genre").value,
     document.getElementById("weight").value,
-    document.getElementById("height").value,
+    document.getElementById("height").value
   );
 
   const url = "http://localhost:3000/profesionales";
@@ -103,7 +102,8 @@ function putActores() {
       return data.json();
     })
     .then(function (result) {
-      if (!result.error) showToast("Actor Actualizado Correctamente", "bg-success");
+      if (!result.error)
+        showToast("Actor Actualizado Correctamente", "bg-success");
       else showToast("Error", "bg-success");
     })
     .catch(function (error) {
@@ -174,4 +174,4 @@ function showToast(message, color) {
 
   let toast = new bootstrap.Toast(toastElement);
   toast.show();
-}   
+}
